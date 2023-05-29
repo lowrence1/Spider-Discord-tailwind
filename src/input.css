@@ -6,7 +6,11 @@
 .container{
     @apply max-w-[120rem] my-0 mx-auto p-[1.5rem];
 }
-
+@layer base{
+    html{
+        font-primary:"gg sans","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+}
 @layer components{
 
     /** ---------- HEADER ---------- */
@@ -36,7 +40,7 @@
     }
 
     .header__action{
-        @apply fixed top-0 right-[-100rem] w-[60%] h-[100vh] bg-light transition-all;
+        @apply fixed top-0 right-[-100rem] w-[60%] h-[100vh] bg-light transition-all lg:hidden;
     }
 
     .header__action.open{
@@ -127,7 +131,7 @@
     /** ---------- BANNER ---------- */
 
     .banner{
-        @apply bg-hmBG min-h-[40rem] bg-cover bg-no-repeat lg:min-h-[35rem]
+        @apply bg-bg1 min-h-[40rem] bg-cover bg-no-repeat lg:min-h-[35rem]
     }
 
     .banner__text{
@@ -157,16 +161,163 @@
     .banner__btn ul li a{
         @apply flex items-center w-fit px-[2rem] py-[1rem] rounded-full
     }
-
-    .banner__btn ul li:first-child a{
-        @apply bg-light
+    .banner__btn a{
+        @apply hover:text-hover gap-[1rem]
     }
+    .banner__btn img{
+        @apply hover:text-hover
+    }
+    .banner__btn ul li:first-child a{
+        @apply bg-light hover:shadow-[0_8px_15px_rgba(0,0,0,.2)]
+    }
+   
 
     .banner__btn ul li:last-child a{
-        @apply bg-dark text-light
+        @apply bg-dark text-light hover:shadow-[0_8px_15px_rgba(0,0,0,.2)]
     }
 
     .banner__btn img{
         @apply mr-[.5rem]
     }
+
+    /*--------------INVITE----------- */
+    .invite{
+        @apply lg:pt-[5rem]
+    }
+    .invite__list{
+        @apply lg:flex lg:items-center justify-center
+    }
+    .invite__text h3{
+        @apply flex  text-[1.23rem] font-bold mb-[1rem] mx-[1rem] lg:text-[3rem] lg:max-w-[25rem]
+    }
+    .invite__text p{
+        @apply text-[1rem] text-gray-500 w-[28rem] mx-[1rem] mb-[2rem] lg:text-[1.2rem] lg:max-w-[24rem]
+    }
+    .invite__list:nth-child(2){
+        @apply bg-grey
+    }
+    .invite__list:nth-child(2)p{
+        @apply mb-[2rem]
+    }
+    .invite__list:nth-child(2) img{
+        @apply order-1
+    }
+
+
+    /* -----------HIWALAY-------------- */
+    .hiwalay{
+        @apply bg-grey 
+    }
+    .hiwalay__text h3{
+    @apply text-[1.7rem] font-bold lg:flex lg:justify-center lg:text-[3rem]
+}
+.hiwalay p{
+    @apply text-[.9rem] text-gray-500 lg:flex lg:justify-center lg:text-[1.2rem] lg:max-w-[60rem] m-auto text-center
+}
+.hiwalay__btn{
+    @apply   lg:flex lg:justify-center lg:items-center m-auto
+}
+.hiwalay__btn a{
+    @apply  flex bottom-[2rem] text-light rounded-full justify-center bg-primary max-w-[100%] p-[1rem] hover:bg-hover gap-[1rem]
+} 
+.hiwalay__list img{
+    @apply lg:block lg:m-auto
+}
+.hiwalay__btn i{
+    @apply flex justify-between items-center gap-[2rem]
+}
+.ready{
+    @apply bg-readyBG bg-no-repeat  w-[30rem] bg-contain lg:justify-center lg:items-center lg:m-auto
+}
+.ready h2{
+    @apply flex justify-center text-[2rem] font-bold mt-[4rem] mb-[2rem] 
+}
+
+.footer{
+    @apply bg-dark py-[2rem]
+}
+
+.footer__wrapper{
+    @apply lg:grid lg:grid-cols-[1.5fr_3fr] lg:justify-between
+}
+
+.footer__flags a{
+    @apply flex items-center text-light
+}
+
+.footer__flags i{
+    @apply ml-[.5rem] text-[.8rem]
+}
+
+.footer__flags img{
+    @apply w-[2rem] h-[1.2rem] mr-[.5rem]
+}
+
+.footer__social{
+    @apply my-[2rem]
+}
+
+.footer__social ul{
+    @apply flex items-center
+}
+
+.footer__social ul li{
+    @apply mr-[1.5rem]
+}
+
+.footer__social ul li a{
+    @apply text-light text-[1.5rem]
+}
+
+.footer__content{
+    @apply lg:grid lg:grid-cols-4
+}
+
+.footer__item{
+    @apply text-light mb-[1.5rem] lg:ml-[2rem]
+}
+
+.footer__item h4{
+    @apply flex justify-between text-primary text-[1rem] cursor-pointer lg:mb-[1rem]
+}
+
+.footer__item i{
+    @apply text-light transition ease-linear duration-300 lg:hidden;
+}
+
+.footer__item i.open{
+    @apply transition ease-linear duration-300 rotate-[180deg];
+}
+
+.footer__item ul{
+    @apply max-h-0 overflow-hidden transition ease-linear duration-300 lg:max-h-[100%]
+}
+
+.footer__item ul.open{
+    @apply max-h-[50rem] p-[1rem] transition ease-linear duration-300 bg-dark shadow-[0_8px_15px_rgba(0,0,0,.2)]
+}
+
+.footer__item ul li{
+    @apply mb-[1rem]
+}
+
+.footer__item ul li a:hover{
+    @apply underline
+}
+
+.footer__btn{
+    @apply border-t-[1px] border-primary
+}
+
+.footer__btn ul{
+    @apply flex items-center justify-between pt-[2.5rem]
+}
+
+.footer__btn ul li a{
+    @apply text-light
+}
+
+.footer__btn ul li:last-child a{
+    @apply bg-[hsl(235,86.1%,71.8%)] text-[.8rem] font-[600] py-[.5rem] px-[1rem] rounded-full
+}
 }

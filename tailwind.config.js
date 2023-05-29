@@ -8,6 +8,8 @@ module.exports = {
         light: '#ffffff',
         primary: '#404EED',
         grey: '#F6F6F6',
+        hover:' hsl(235,86.1%,71.8%)',
+        hoverb:'(223,6.7%,20.6%)'
       },
 
       screens: {
@@ -19,6 +21,8 @@ module.exports = {
 
       backgroundImage: {
         'hmBG':'url("./img/hm-bg.svg")',
+        'readyBG':'url("./img/svgexport-7.svg")',
+        'bg1': 'url("./img/bg-img1.png")',
       },
     },
   },
