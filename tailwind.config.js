@@ -6,10 +6,10 @@ module.exports = {
       colors: {
         dark: '#23272A',
         light: '#ffffff',
-        primary: '#404EED',
+        primary: '#5865F2',
         grey: '#F6F6F6',
         hover:' hsl(235,86.1%,71.8%)',
-        hoverb:'(223,6.7%,20.6%)'
+        hoverb:'(#313338)'
       },
 
       screens: {

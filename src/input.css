@@ -22,7 +22,12 @@
     .header__wrapper{
         @apply flex items-center justify-between;
     }
-
+.blur{
+    @apply h-[100vh] w-[40%] absolute top-0 left-[100rem] bg-dark opacity-50 z-50 duration-[.5s] transition lg:hidden
+}
+.blur.open{
+    @apply left-0 transition duration-[.5s]
+}
     .header__nav ul{
         @apply hidden lg:flex;
     }
@@ -151,11 +156,11 @@
     }
 
     .banner__btn ul{
-        @apply lg:flex lg:items-center lg:justify-center 
+        @apply lg:flex lg:items-center lg:justify-center  
     }
 
     .banner__btn ul li{
-        @apply mb-[1.5rem] lg:mr-[1.5rem]
+        @apply mb-[1.5rem] lg:mr-[1.5rem] 
     }
 
     .banner__btn ul li a{
@@ -173,7 +178,7 @@
    
 
     .banner__btn ul li:last-child a{
-        @apply bg-dark text-light hover:shadow-[0_8px_15px_rgba(0,0,0,.2)]
+        @apply bg-dark text-light hover:shadow-[0_8px_15px_rgba(0,0,0,.2)]  hover:opacity-90 
     }
 
     .banner__btn img{
@@ -238,7 +243,7 @@
 }
 
 .footer__wrapper{
-    @apply lg:grid lg:grid-cols-[1.5fr_3fr] lg:justify-between
+    @apply lg:grid lg:grid-cols-[1.4fr_3fr] justify-between
 }
 
 .footer__flags a{
@@ -318,6 +323,6 @@
 }
 
 .footer__btn ul li:last-child a{
-    @apply bg-[hsl(235,86.1%,71.8%)] text-[.8rem] font-[600] py-[.5rem] px-[1rem] rounded-full
+    @apply bg-primary text-[.8rem] font-[600] py-[.5rem] px-[1rem] rounded-full hover:bg-hover
 }
 }
